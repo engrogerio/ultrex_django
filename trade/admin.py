@@ -23,7 +23,7 @@ class DeployMixin:
 class TradeAdmin(admin.ModelAdmin, DeployMixin): 
     actions = ['deploy']
     list_display = ('id', 'asset', 'amount', 'action', 'duration', 'martingale',
-    'martingale_factor', 'start_datetime', 'status')
+    'martingale_factor', 'type', 'start_datetime', 'status')
     readonly_fields = ['status']
     #search_fields = ['asset',]
     list_filter = ['status', 'asset', ]
